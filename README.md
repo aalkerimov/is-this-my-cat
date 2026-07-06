@@ -16,4 +16,6 @@ I built a model that looks at an image and tries to decide whether the cat in th
 
 This project is mainly for learning, experimenting, and understanding how image classification works
 
+Images for the "not my cat" class were taken from the [AlvaroVasquezAI/Animal_Image_Classification_Dataset](https://huggingface.co/datasets/AlvaroVasquezAI/Animal_Image_Classification_Dataset) on Hugging Face. Kudos to Alvaro Vasquez! 
+
 By Arthur Kerimov
