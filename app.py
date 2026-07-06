@@ -1,4 +1,15 @@
+import pathlib
+import sys
 from pathlib import Path
+
+# Patch WindowsPath to PosixPath when running on Linux (needed for fastai models trained on Windows)
+if sys.platform != "win32":
+    pathlib.WindowsPath = pathlib.PosixPath
+    try:
+        import pathlib._local
+        pathlib._local.WindowsPath = pathlib.PosixPath
+    except ImportError:
+        pass
 
 import gradio as gr
 from fastai.vision.all import PILImage, load_learner
